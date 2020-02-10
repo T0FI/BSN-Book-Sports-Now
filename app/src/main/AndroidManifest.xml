@@ -9,10 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sports"></activity>
-        <activity android:name=".Extra2Activity" />
-        <activity android:name=".ExtraAdapter" />
-        <activity android:name=".Extra1Activity">
+        <activity android:name=".Payment_choice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
