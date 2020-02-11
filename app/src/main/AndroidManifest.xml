@@ -16,6 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".Singlepayment"></activity>
+        <activity android:name=".Homepage"></activity>
+        <activity android:name=".Extra2Activity"></activity>
+        <activity android:name=".ExtraAdapter"></activity>
+        <activity android:name=".Extra1Activity"></activity>
+        <activity android:name=".Sports"></activity>
+</application>
 
 </manifest>
