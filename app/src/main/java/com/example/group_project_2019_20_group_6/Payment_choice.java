@@ -63,6 +63,10 @@ public class Payment_choice extends AppCompatActivity implements View.OnClickLis
             case R.id.Singlepayer:
                 startActivity(new Intent(getApplicationContext(),Singlepayment.class));
                 break;
+            case R.id.multipayers:
+                startActivity(new Intent(getApplicationContext(),SplitPay.class));
+                break;
         }
+
     }
 }
