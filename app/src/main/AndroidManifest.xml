@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplitPay"></activity>
+        <activity android:name=".LeagueMain"></activity>
+        <activity android:name=".SplitPay" />
         <activity android:name=".Payment_choice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
