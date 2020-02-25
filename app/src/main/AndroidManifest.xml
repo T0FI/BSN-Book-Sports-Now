@@ -9,13 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SelectSportScreen">
+        <activity android:name=".SplitPay"></activity>
+        <activity android:name=".Payment_choice">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Singlepayment" />
+        <activity android:name=".Homepage" />
+        <activity android:name=".Extra2Activity" />
+        <activity android:name=".ExtraAdapter" />
+        <activity android:name=".Extra1Activity" />
+        <activity android:name=".Sports" />
     </application>
 
 </manifest>
