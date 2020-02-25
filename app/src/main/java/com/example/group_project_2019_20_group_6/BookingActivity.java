@@ -106,8 +106,8 @@ public class BookingActivity extends AppCompatActivity {
         stepList.add("Branch");
         stepList.add("Pitch");
         stepList.add("Time");
-        stepList.add("Extras");
-        stepList.add("Confirm");
+//        stepList.add("Extras");
+//        stepList.add("Confirm");
         stepView.setSteps(stepList);
 
 
