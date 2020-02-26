@@ -13,7 +13,7 @@
         android:src="@mipmap/ic_launcher"
         android:layout_marginTop="150dp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/imageView2"
+        android:id="@+id/ivFootballSplash"
         />
 
     <TextView

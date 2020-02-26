@@ -33,7 +33,7 @@ public class Extra2Activity extends AppCompatActivity {
             actionBar.setDisplayShowHomeEnabled(true);
         }
 
-        imageView=findViewById(R.id.imageView2);
+        imageView=findViewById(R.id.ivFootballSplash);
         Title=findViewById(R.id.titleView);
         showValue=findViewById(R.id.counterValue);
         showValue.setText(Integer.toString(counter));
