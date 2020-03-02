@@ -6,18 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class LeagueMain extends AppCompatActivity {
+public class league_setup extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_league_main);
-        Button create_league = findViewById(R.id.create);
+        setContentView(R.layout.activity_league_setup);
         //Initialising and assigning variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -48,14 +45,5 @@ public class LeagueMain extends AppCompatActivity {
                 return false;
             }
         });
-    }
-    public void onClick(View v) {
-        switch(v.getId())
-        {
-            case R.id.create:
-                startActivity(new Intent(getApplicationContext(),league_setup.class));
-                break;
-        }
-
     }
 }
