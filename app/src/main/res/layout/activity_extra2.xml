@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".Main2Activity">
+    tools:context=".Extra2Activity">
 
     <ImageView
         android:layout_width="150dp"
@@ -69,6 +69,17 @@
         android:textAlignment="center"
         android:textSize="28sp"
         />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/titleView"
+        android:layout_marginTop="545dp"
+        android:onClick="Onclick_Add"
+        android:text="Add"
+        android:textSize="20dp" />
+    />
 
 
 </RelativeLayout>

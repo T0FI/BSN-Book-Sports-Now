@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Extra2Activity extends AppCompatActivity {
 
     ImageView imageView;
@@ -17,6 +19,8 @@ public class Extra2Activity extends AppCompatActivity {
     TextView Title;
     TextView showValue;
     int counter=0;// counter starts at zero
+    static ArrayList<Integer> amounts= new ArrayList<>();
+
 
 
 
@@ -199,5 +203,11 @@ public class Extra2Activity extends AppCompatActivity {
             showValue.setText(Integer.toString(counter));
         }
 
+    }
+
+    public void Onclick_Add(View view){
+        amounts.add(counter);
+        Intent intent= new Intent(this, Extra1Activity.class);
+        startActivity(intent);
     }
 }

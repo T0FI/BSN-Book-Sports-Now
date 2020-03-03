@@ -177,4 +177,9 @@ public class Extra1Activity extends AppCompatActivity {
         return allSports;
 
     }
+
+    public void Onclick_Next(View view){
+        Intent intent1= new Intent(this,Payment_choice.class);
+        startActivity(intent1);
+    }
 }
