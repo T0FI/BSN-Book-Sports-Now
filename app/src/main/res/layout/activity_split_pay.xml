@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="User ID" />
+        android:hint="User ID"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/add"
@@ -24,5 +24,11 @@
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="576dp" />
+
+    <Button
+        android:id="@+id/inv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Invite" />
 </LinearLayout>

@@ -8,22 +8,16 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
-public class Payment_choice extends AppCompatActivity implements View.OnClickListener {
+public class LeagueMain extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment_choice);
-        ImageButton singlepayment = findViewById(R.id.Singlepayer);
-        ImageButton multipayment = findViewById(R.id.multipayers);
-        singlepayment.setOnClickListener(this);
-        multipayment.setOnClickListener(this);
+        setContentView(R.layout.activity_league_main);
+        Button create_league = findViewById(R.id.create);
         //Initialising and assigning variable
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
@@ -55,16 +49,11 @@ public class Payment_choice extends AppCompatActivity implements View.OnClickLis
             }
         });
     }
-
-    @Override
     public void onClick(View v) {
         switch(v.getId())
         {
-            case R.id.Singlepayer:
-                startActivity(new Intent(getApplicationContext(),Singlepayment.class));
-                break;
-            case R.id.multipayers:
-                startActivity(new Intent(getApplicationContext(),SplitPay.class));
+            case R.id.create:
+                startActivity(new Intent(getApplicationContext(),league_setup.class));
                 break;
         }
 

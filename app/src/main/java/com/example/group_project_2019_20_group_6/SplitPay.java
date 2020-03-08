@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 public class SplitPay extends AppCompatActivity {
 
+
     private ArrayList<String> itemList;
     private ArrayAdapter adapter;
     private EditText itemText;
