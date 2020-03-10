@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectSportScreen">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="204dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="28dp"
+        android:text="Select Sport To Book"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFootball"
+        android:layout_width="166dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="24dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader"
+        app:srcCompat="@drawable/football"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/ivBasketBall"
+        android:layout_width="168dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.374"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFootballLabel"
+        app:srcCompat="@drawable/basketball" />
+
+    <ImageView
+        android:id="@+id/ivTennis"
+        android:layout_width="174dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBasketballLabel"
+        app:srcCompat="@drawable/tennis" />
+
+    <TextView
+        android:id="@+id/tvFootballLabel"
+        android:layout_width="147dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:text="Football"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivFootball" />
+
+    <TextView
+        android:id="@+id/tvBasketballLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Basketball"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBasketBall" />
+
+    <TextView
+        android:id="@+id/tvTennisLabel"
+        android:layout_width="67dp"
+        android:layout_height="25dp"
+        android:text="Tennis"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTennis"
+        app:layout_constraintVertical_bias="0.107" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,5 +24,11 @@
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="576dp" />
+
+    <Button
+        android:id="@+id/inv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Invite" />
 </LinearLayout>

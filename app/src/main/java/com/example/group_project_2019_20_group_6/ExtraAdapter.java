@@ -1,10 +1,7 @@
 package com.example.group_project_2019_20_group_6;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -98,7 +95,7 @@ public class ExtraAdapter extends BaseExpandableListAdapter {
 
         //set child/extra name
         TextView tv = (TextView) convertView.findViewById(R.id.textView2);
-        ImageView img = (ImageView) convertView.findViewById(R.id.imageView);
+        ImageView img = (ImageView) convertView.findViewById(R.id.ivBasketballSplash);
 
         tv.setText(child);
 
