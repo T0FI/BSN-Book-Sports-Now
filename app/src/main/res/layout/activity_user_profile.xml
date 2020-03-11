@@ -6,29 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".UserProfile">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="264dp"
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginBottom="49dp"
-        android:text="Change Password"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:layout_marginBottom="35dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="PREVIOUS BOOKINGS"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="141dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="27dp"
-        android:layout_marginBottom="69dp"
-        android:text="Email"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="53dp"
+        android:text="Address"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="@+id/button3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -37,7 +39,7 @@
         android:layout_width="273dp"
         android:layout_height="0dp"
         android:layout_marginStart="27dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="29dp"
         android:text="UserName"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -50,23 +52,24 @@
         android:layout_width="172dp"
         android:layout_height="0dp"
         android:layout_marginStart="27dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="87dp"
         android:background="@android:color/holo_red_dark"
         android:text="My Leagues"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
+        android:layout_marginStart="27dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginBottom="26dp"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/app_logo1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
