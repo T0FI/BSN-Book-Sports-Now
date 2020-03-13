@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashScreen"></activity>
-        <activity android:name=".SplitPay" />
-        <activity android:name=".Payment_choice">
+        <activity android:name=".BookingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
