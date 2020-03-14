@@ -8,7 +8,7 @@ import android.os.Handler;
 
 public class Splash_Screen extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 8000;
+    private static int SPLASH_TIME_OUT = 6000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class Splash_Screen extends AppCompatActivity {
             public void run() {
                 Intent homeintent = new Intent(Splash_Screen.this
                         ,Homepage.class); //change to user log in when screen is uploaded,
-                                          
+
                 startActivity(homeintent);
                 finish();
             }
