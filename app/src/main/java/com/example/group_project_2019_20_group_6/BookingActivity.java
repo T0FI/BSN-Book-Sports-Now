@@ -1,12 +1,18 @@
 package com.example.group_project_2019_20_group_6;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.group_project_2019_20_group_6.Adapter.MyViewPageAdapter;
+import com.google.android.gms.common.internal.service.Common;
 import com.shuhart.stepview.StepView;
 
 import java.util.ArrayList;
@@ -14,8 +20,12 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class BookingActivity extends AppCompatActivity {
+
+
+    LocalBroadcastManager localBroadcastManager;
 
     @BindView(R.id.step_view)
     StepView stepView;
@@ -30,6 +40,20 @@ public class BookingActivity extends AppCompatActivity {
     Button btn_Next;
 
 
+    //Event
+    @OnClick(R.id.btn_Next)
+    void nextClick(){
+
+    }
+
+    private BroadcastReceiver buttonNextReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+
+            btn_Next.setEnabled(true);
+            setColorButton();
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +62,9 @@ public class BookingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_booking);
 
         ButterKnife.bind(this);
+
+        localBroadcastManager = LocalBroadcastManager.getInstance(this);
+//        localBroadcastManager.registerReceiver(buttonNextReceiver.);
 
         setupStepView();
         setColorButton();
@@ -55,6 +82,11 @@ public class BookingActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int i) {
 
+
+                //Show step
+                stepView.go(i,true  );
+
+
                 if (i==0)
                     btn_Previous.setEnabled(false);
                 else
@@ -70,6 +102,7 @@ public class BookingActivity extends AppCompatActivity {
             }
 
         });
+
 
 
     }
