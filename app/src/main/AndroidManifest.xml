@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".BookingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,9 @@
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />
         <activity android:name=".Sports" />
+
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>
