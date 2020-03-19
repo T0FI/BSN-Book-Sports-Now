@@ -41,6 +41,29 @@ import static com.example.group_project_2019_20_group_6.Adapter.sqlBranchAdapter
 
 public class BookingStep1Fragment extends Fragment {
 
+    public static class Branch {
+        int no;
+        int location;
+        String name;
+        String locationName;
+
+        public int getBranchNo() {
+                return no;
+        }
+
+        Branch(int n, int location, String name, String locationName) {
+            no = n;
+            this.location = location;
+            this.name = name;
+            this.locationName = locationName;
+        }
+
+        @Override
+        public String toString() {
+            return name + "  -  " + locationName;
+        }
+
+    }
 
     @BindView(R.id.spinner)
     MaterialSpinner spinner;
@@ -53,37 +76,17 @@ public class BookingStep1Fragment extends Fragment {
     static BookingStep1Fragment instance;
 
     public static BookingStep1Fragment getInstance() {
-        if (instance == null)
-            instance = new BookingStep1Fragment();
         return instance;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        instance = this;
     }
 
     public void updateSpinner() {
 
-        class Branch {
-            int no;
-            int location;
-            String name;
-            String locationName;
-
-            Branch(int n, int location, String name, String locationName) {
-                no = n;
-                this.location = location;
-                this.name = name;
-                this.locationName = locationName;
-            }
-
-            @Override
-            public String toString() {
-                return name + "-" + locationName;
-            }
-
-        }
 
         ArrayList<Branch> list = new ArrayList<Branch>();
              //Get tuple (row)
