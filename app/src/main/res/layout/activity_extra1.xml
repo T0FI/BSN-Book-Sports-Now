@@ -9,12 +9,12 @@
      <ExpandableListView
 
          android:id="@+id/expandableView"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
+         android:layout_width="410dp"
+         android:layout_height="match_parent"
          android:layout_alignParentLeft="true"
          android:layout_alignParentRight="true"
-         android:layout_marginLeft="-3dp"
-         android:layout_marginRight="3dp">
+         android:layout_marginLeft="1dp"
+         android:layout_marginRight="0dp">
 
      </ExpandableListView>
 
