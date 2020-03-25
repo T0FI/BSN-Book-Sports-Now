@@ -38,10 +38,10 @@ public class Payment_choice extends AppCompatActivity implements View.OnClickLis
                         startActivity(new Intent(getApplicationContext(),Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.feed:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
-                        overridePendingTransition(0,0);
-                        return true;
+//                    case R.id.feed:
+//                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+//                        overridePendingTransition(0,0);
+//                        return true;
                     case R.id.league:
                         startActivity(new Intent(getApplicationContext(),LeagueMain.class));
                         overridePendingTransition(0,0);

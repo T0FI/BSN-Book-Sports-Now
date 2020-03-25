@@ -11,17 +11,16 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class LeagueMain extends AppCompatActivity {
+public class Layout_Test extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_league_main);
-        Button create_league = findViewById(R.id.create);
-        //Initialising and assigning variable
-        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        setContentView(R.layout.activity_layout__test);
 
-        //perform itemselectedlistener
+
+        //Copy This Code To Your .Java
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
 
             @Override
@@ -32,10 +31,6 @@ public class LeagueMain extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(),Homepage.class));
                         overridePendingTransition(0,0);
                         return true;
-//                    case R.id.feed:
-//                        startActivity(new Intent(getApplicationContext(),Homepage.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
                     case R.id.league:
                         startActivity(new Intent(getApplicationContext(),LeagueMain.class));
                         overridePendingTransition(0,0);
@@ -47,15 +42,11 @@ public class LeagueMain extends AppCompatActivity {
                 }
                 return false;
             }
-        });
-    }
-    public void onClick(View v) {
-        switch(v.getId())
-        {
-            case R.id.create:
-                startActivity(new Intent(getApplicationContext(),league_setup.class));
-                break;
-        }
+ });        //up to here
+
 
     }
-}
+
+
+    }
+
