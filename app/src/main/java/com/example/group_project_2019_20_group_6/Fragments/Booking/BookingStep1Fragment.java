@@ -68,26 +68,25 @@ public class BookingStep1Fragment extends Fragment {
     @BindView(R.id.spinner)
     MaterialSpinner spinner;
 
-    //@BindView(R.id.recycler_branch)
-    //RecyclerView recycler_branch;
 
     Unbinder unbinder;
 
     static BookingStep1Fragment instance;
 
     public static BookingStep1Fragment getInstance() {
+        if (instance == null)
+            instance = new BookingStep1Fragment();
         return instance;
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        instance = this;
     }
 
+    public static Branch selectedBranch;
+
     public void updateSpinner() {
-
-
         ArrayList<Branch> list = new ArrayList<Branch>();
              //Get tuple (row)
         for (int i = 0; i < json.length(); i++) {
@@ -97,9 +96,7 @@ public class BookingStep1Fragment extends Fragment {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
-            //Create a branch form the tuple
+            //Create a branch from the tuple
             try {
                 Branch br = new Branch(elm.getInt("branchNo"), elm.getInt("locationNo"), elm.getString("branchName"), elm.getString("branchLocationName"));
                 list.add(br);
@@ -109,6 +106,12 @@ public class BookingStep1Fragment extends Fragment {
 
         }
         spinner.setItems(list);
+
+        spinner.setOnItemSelectedListener((a,b,c,d)-> {
+            selectedBranch = list.get(a.getSelectedIndex());
+            System.out.println("Selected");
+            BookingStep2Fragment.connect();
+        });
     }
 
     @Nullable

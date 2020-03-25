@@ -22,6 +22,7 @@ public class sqlPitchAdapter {
 
     //https://stackoverflow.com/questions/45849670/how-to-get-from-mysql-data-to-android-with-json
     public static void connect(final BookingStep2Fragment obj, BookingStep1Fragment.Branch b) {
+        if (b == null) return;
         url += b.getBranchNo();
         request = new JsonArrayRequest(Request.Method.GET, url,null, new Response.Listener<JSONArray>() {
             @Override
