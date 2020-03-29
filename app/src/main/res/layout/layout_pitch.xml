@@ -5,7 +5,7 @@
     app:cardCornerRadius="4dp"
     android:id="@+id/card_pitch"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:orientation="vertical"
@@ -22,7 +22,7 @@
 
         <TextView
             android:id="@+id/pitch_number"
-            android:text="Pitch Number 1"
+            android:text="Pitch Number "
             android:textSize="20sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
@@ -31,7 +31,7 @@
 
         <TextView
             android:id="@+id/pitch_size"
-            android:text=""
+            android:text="Size"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
 
         <TextView
             android:id="@+id/pitch_price"
-            android:text="£60"
+            android:text="Price"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
