@@ -152,7 +152,7 @@ public class BookingStep2Fragment extends Fragment {
                 Pitch p = list.get(position);
                 LinearLayout o = (LinearLayout) holder.v.getChildAt(0);
 
-                ((TextView) o.getChildAt(1)).setText(String.valueOf(p.no));
+                ((TextView) o.getChildAt(1)).setText("Pitch Number: " + p.no);
                 ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
                 ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
 
