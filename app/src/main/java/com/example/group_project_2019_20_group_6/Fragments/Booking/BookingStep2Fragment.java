@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -57,7 +58,7 @@ public class BookingStep2Fragment extends Fragment {
 
         @Override
         public String toString() {
-            return pitchSize + "PITCH";
+            return no + "";
         }
     }
 
@@ -152,16 +153,20 @@ public class BookingStep2Fragment extends Fragment {
                 Pitch p = list.get(position);
                 LinearLayout o = (LinearLayout) holder.v.getChildAt(0);
 
+
+
                 ((TextView) o.getChildAt(1)).setText("Pitch Number: " + p.no);
-                ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
-                ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
+                            ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
+                            ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
+
 
                 holder.itemView.setOnClickListener((event) -> {
                     Pitch clickedPitch  = p;
+                    Toast.makeText(getContext(), "You Have Selected Pitch Number" + p, Toast.LENGTH_SHORT).show();
 
-                    //Call on booking 3
 
                 });
+
 
             }
 
@@ -174,6 +179,7 @@ public class BookingStep2Fragment extends Fragment {
 
         MyAdapter a = new MyAdapter();
         recycler_pitch.setAdapter(a);
+
 
     }
 }

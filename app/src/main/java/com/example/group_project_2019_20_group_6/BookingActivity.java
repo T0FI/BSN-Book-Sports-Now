@@ -44,13 +44,15 @@ public class BookingActivity extends AppCompatActivity {
     @OnClick(R.id.btn_Next)
     void nextClick(){
 
+        Intent intentLoadAnalyseAct = new Intent(BookingActivity.this, Extra1Activity.class);
+        startActivity(intentLoadAnalyseAct);
     }
 
     private BroadcastReceiver buttonNextReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            btn_Next.setEnabled(true);
+            btn_Next.setEnabled(false);
             setColorButton();
         }
     };
@@ -86,13 +88,14 @@ public class BookingActivity extends AppCompatActivity {
                 //Show step
                 stepView.go(i,true  );
 
-
+                //Enables the "next" button on step 3
                 if (i==2)
                     btn_Next.setEnabled(true);
                 else
                     btn_Next.setEnabled(false);
 
                 setColorButton();
+
 
             }
 

@@ -5,7 +5,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.group_project_2019_20_group_6.Fragments.Booking.BookingStep1Fragment;
 import com.example.group_project_2019_20_group_6.Fragments.Booking.BookingStep3Fragment;
 
 import org.json.JSONArray;
