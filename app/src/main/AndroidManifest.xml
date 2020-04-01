@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.group_project_2019_20_group_6">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingActivity">
-
+        <activity android:name=".League_layout"></activity>
+        <activity android:name=".LeagueTest" />
+        <!--<activity android:name=".LeagueMainTest" />-->
+        <activity android:name=".LeagueMainTest">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,9 +28,6 @@
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />
         <activity android:name=".Sports" />
-
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

@@ -55,6 +55,9 @@ public class LeagueMain extends AppCompatActivity {
             case R.id.create:
                 startActivity(new Intent(getApplicationContext(),league_setup.class));
                 break;
+            case R.id.current_leagues:
+                Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMainTest.class);
+                break;
         }
 
     }
