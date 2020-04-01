@@ -24,7 +24,7 @@ public class LeagueMain extends AppCompatActivity {
     @OnClick(R.id.join)
     void nextClick(){
 
-        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMainTest.class);
+        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMain.class);
         startActivity(intentLoadAnalyseAct);
     }
 
