@@ -45,9 +45,7 @@ public class BookingStep2Fragment extends Fragment {
         int pitchPrice;
         String pitchSize;
 
-        public int getPitchNo() {
-            return no;
-        }
+
 
         Pitch(int n, int pitchPrice, String pitchSize) {
 
@@ -156,8 +154,8 @@ public class BookingStep2Fragment extends Fragment {
 
 
                 ((TextView) o.getChildAt(1)).setText("Pitch Number: " + p.no);
-                            ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
-                            ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
+                ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
+                ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
 
 
                 holder.itemView.setOnClickListener((event) -> {
