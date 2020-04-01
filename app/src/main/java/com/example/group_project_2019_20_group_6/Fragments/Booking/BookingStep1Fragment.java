@@ -47,9 +47,7 @@ public class BookingStep1Fragment extends Fragment {
         String name;
         String locationName;
 
-        public int getBranchNo() {
-                return no;
-        }
+        public int getBranchNo() { return no; }
 
         Branch(int n, int location, String name, String locationName) {
             no = n;

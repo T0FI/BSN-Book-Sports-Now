@@ -11,7 +11,22 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+
 public class LeagueMain extends AppCompatActivity {
+
+
+    @BindView(R.id.join)
+    Button Join;
+
+
+    @OnClick(R.id.join)
+    void nextClick(){
+
+        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMainTest.class);
+        startActivity(intentLoadAnalyseAct);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,6 +10,7 @@ import com.example.group_project_2019_20_group_6.Fragments.Booking.BookingStep3F
 import org.json.JSONArray;
 
 public class sqlTimesAdapter {
+
     //URL to get all the current branches in the database
     private static String url = "http://81.98.161.132/getAlltimes.php";
 

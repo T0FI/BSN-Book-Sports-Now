@@ -8,10 +8,7 @@
     android:layout_height="match_parent">
 
 
-    <CalendarView
-        android:id="@+id/calendarID"
-        android:layout_width="match_parent"
-        android:layout_height="320dp" />
+
 
     <com.jaredrummler.materialspinner.MaterialSpinner
         android:id="@+id/spinnerTime"
@@ -19,6 +16,11 @@
         android:layout_height="wrap_content"
         android:hint="Select Time"
         app:ms_hint="Select Time" />
+
+    <CalendarView
+        android:id="@+id/calendarID"
+        android:layout_width="match_parent"
+        android:layout_height="320dp" />
 
 
 </LinearLayout>
