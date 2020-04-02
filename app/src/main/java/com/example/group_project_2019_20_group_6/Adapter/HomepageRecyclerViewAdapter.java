@@ -1,6 +1,9 @@
 package com.example.group_project_2019_20_group_6.Adapter;
 
 import android.content.Context;
+import android.nfc.Tag;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.group_project_2019_20_group_6.R;
 
 import java.util.ArrayList;
@@ -23,6 +27,7 @@ public class HomepageRecyclerViewAdapter extends RecyclerView.Adapter<HomepageRe
     private ArrayList<String> mImage = new ArrayList<>();
     private Context mContext;
 
+
     public HomepageRecyclerViewAdapter(ArrayList<String> mImageNames, ArrayList<String> mImagesPost, ArrayList<String> mImage, Context mContext) {
         this.mImageNames = mImageNames;
         this.mImagesPost = mImagesPost;
@@ -33,17 +38,29 @@ public class HomepageRecyclerViewAdapter extends RecyclerView.Adapter<HomepageRe
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list,parent,false);
+        ViewHolder holder = new ViewHolder(view);
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        Log.d(TAG,"onBindViewHolder: called.");
 
+        // we will be adding the images to this section
+        Glide.with(mContext)
+        .asBitmap()
+                .load(mImage.get(position))
+                .into(holder.image);
+
+        // we will get the image names
+        holder.imagename.setText(mImageNames.get(position));
+        //when the post has been clicked we will show something
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mImageNames.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
