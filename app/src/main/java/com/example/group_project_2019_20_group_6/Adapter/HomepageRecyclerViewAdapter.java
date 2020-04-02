@@ -49,8 +49,8 @@ public class HomepageRecyclerViewAdapter extends RecyclerView.Adapter<HomepageRe
 
         // we will be adding the images to this section
         Glide.with(mContext)
-        .asBitmap()
-                .load(mImage.get(position))
+                .asBitmap()
+                .load(mImagesPost.get(position))
                 .into(holder.image);
 
         // we will get the image names
