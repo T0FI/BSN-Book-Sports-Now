@@ -19,6 +19,8 @@ public class Layout_Test extends AppCompatActivity {
         setContentView(R.layout.activity_layout__test);
 
 
+
+
         //Copy This Code To Your .Java
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -28,25 +30,52 @@ public class Layout_Test extends AppCompatActivity {
                 switch(menuItem.getItemId())
                 {
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent = new Intent(Layout_Test.this,
+                                com.example.group_project_2019_20_group_6.Homepage.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent);
+                        break;
                     case R.id.league:
-                        startActivity(new Intent(getApplicationContext(),LeagueMain.class));
+                        Intent intent2 = new Intent(Layout_Test.this,
+                                com.example.group_project_2019_20_group_6.LeagueMain.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent2);
+                        break;
                     case R.id.userscreen:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent3 = new Intent(Layout_Test.this,
+                                com.example.group_project_2019_20_group_6.UserProfile.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent3);
+                        break;
                 }
                 return false;
             }
  });        //up to here
 
 
+
+
     }
 
+//    public void onClick(View v) {
+//        switch(v.getId())
+//        {
+//            case R.id.home:
+//                startActivity(new Intent(getApplicationContext(),Layout_Test.class));
+//                break;
+//            case R.id.league:
+//                Intent intent1 = new Intent(Layout_Test.this,
+//                        com.example.group_project_2019_20_group_6.LeagueMain.class);
+//                startActivity(intent1);
+//                break;
+//            case R.id.userscreen:
+//                Intent intent = new Intent(Layout_Test.this,
+//                        com.example.group_project_2019_20_group_6.UserProfile.class);
+//                startActivity(intent);
+//                break;
+//        }
+//
+//    }
 
     }
 

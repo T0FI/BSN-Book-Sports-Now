@@ -16,7 +16,7 @@
         <activity android:name=".Splash_Screen">
 
             <!-- Need to keep this as this so the splash screen works -->
-<!--            the intent-filter otherwise you'd get running app error-->
+<!--         don't get rid of the intent-filter otherwise you'd get running app error-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Layout_Test"></activity>
+        <activity android:name=".LeagueMain" />
+        <activity android:name=".UserProfile" />
         <activity android:name=".BookingActivity" />
         <activity android:name=".Singlepayment" />
         <activity android:name=".Homepage" />
