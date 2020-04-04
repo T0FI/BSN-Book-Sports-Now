@@ -11,7 +11,22 @@ import android.widget.Button;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+
 public class LeagueMain extends AppCompatActivity {
+
+
+    @BindView(R.id.join)
+    Button Join;
+
+
+    @OnClick(R.id.join)
+    void nextClick(){
+
+        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMain.class);
+        startActivity(intentLoadAnalyseAct);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,21 +44,23 @@ public class LeagueMain extends AppCompatActivity {
                 switch(menuItem.getItemId())
                 {
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent = new Intent(LeagueMain.this,
+                                com.example.group_project_2019_20_group_6.Homepage.class);
                         overridePendingTransition(0,0);
-                        return true;
-//                    case R.id.feed:
-//                        startActivity(new Intent(getApplicationContext(),Homepage.class));
-//                        overridePendingTransition(0,0);
-//                        return true;
+                        startActivity(intent);
+                        break;
                     case R.id.league:
-                        startActivity(new Intent(getApplicationContext(),LeagueMain.class));
+                        Intent intent2 = new Intent(LeagueMain.this,
+                                com.example.group_project_2019_20_group_6.LeagueMain.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent2);
+                        break;
                     case R.id.userscreen:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent3 = new Intent(LeagueMain.this,
+                                com.example.group_project_2019_20_group_6.UserProfile.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent3);
+                        break;
                 }
                 return false;
             }
@@ -54,6 +71,9 @@ public class LeagueMain extends AppCompatActivity {
         {
             case R.id.create:
                 startActivity(new Intent(getApplicationContext(),league_setup.class));
+                break;
+            case R.id.current_leagues:
+                Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMainTest.class);
                 break;
         }
 

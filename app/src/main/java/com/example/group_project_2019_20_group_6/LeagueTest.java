@@ -1,4 +1,11 @@
-package com.example.group_project_2019_20_group_6.Fragments.Booking;
+package com.example.group_project_2019_20_group_6;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,52 +13,42 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.group_project_2019_20_group_6.Adapter.sqlBranchAdapter;
-import com.example.group_project_2019_20_group_6.Adapter.sqlPitchAdapter;
-import com.example.group_project_2019_20_group_6.R;
+import com.example.group_project_2019_20_group_6.Adapter.sqlLeagueAdapter;
+import com.example.group_project_2019_20_group_6.Fragments.Booking.BookingStep1Fragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static com.example.group_project_2019_20_group_6.Adapter.sqlPitchAdapter.json;
-
 import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
+import static com.example.group_project_2019_20_group_6.Adapter.sqlLeagueAdapter.json;
 
-public class BookingStep2Fragment extends Fragment {
+public class LeagueTest extends Fragment {
 
-    @BindView(R.id.recycler_pitch)
-    RecyclerView pitchesView;
+    @Nullable
+    @BindView(R.id.recycler_league)
+    RecyclerView leagueView;
 
-    private RecyclerView recycler_pitch = pitchesView;
 
-    public static class Pitch {
+    public static class League {
         int no;
-        int pitchPrice;
-        String pitchSize;
+        String leagueName;
+        String leagueCapacity;
+        String ageRange;
 
 
 
-        Pitch(int n, int pitchPrice, String pitchSize) {
+        League(int n, String leagueCapacity, String ageRange, String leagueName) {
 
             no = n;
-            this.pitchPrice = pitchPrice;
-            this.pitchSize = pitchSize;
+            this.leagueCapacity = leagueCapacity;
+            this.ageRange = ageRange;
+            this.leagueName = leagueName;
         }
 
         @Override
@@ -60,11 +57,11 @@ public class BookingStep2Fragment extends Fragment {
         }
     }
 
-    static BookingStep2Fragment instance;
+    static LeagueTest instance;
 
-    public static BookingStep2Fragment getInstance() {
+    public static LeagueTest getInstance() {
         if (instance == null)
-            instance = new BookingStep2Fragment();
+            instance = new LeagueTest();
         return instance;
     }
 
@@ -74,25 +71,30 @@ public class BookingStep2Fragment extends Fragment {
 
     }
 
+    RecyclerView recycler_league;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View itemView = inflater.inflate(R.layout.fragment_booking_step_two, container, false);
+
+        View itemView = inflater.inflate(R.layout.activity_league_test, container, false);
         Unbinder unbinder = ButterKnife.bind(this, itemView);
 
-        return itemView;
+        recycler_league = leagueView;
 
+        connect();
+
+        return itemView;
     }
 
     public static void connect() {
-        sqlPitchAdapter.connect(getInstance(), BookingStep1Fragment.selectedBranch);
+        sqlLeagueAdapter.connect(getInstance());
     }
 
     public void update() {
 
-        ArrayList<Pitch> list = new ArrayList<Pitch>();
+        ArrayList<League> list = new ArrayList<League>();
 
         //Get row from database
         for (int i = 0; i < json.length(); i++) {
@@ -105,17 +107,17 @@ public class BookingStep2Fragment extends Fragment {
 
             //Create a branch from the row
             try {
-                Pitch br = new Pitch(elm.getInt("pitchNo"), elm.getInt("pitchPrize"), elm.getString("pitchSize"));
-                list.add(br);
+                League L = new League(elm.getInt("leagueNo"), elm.getString("leagueName"), elm.getString("leagueCapacity"), elm.getString("ageRange"));
+                list.add(L);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
         //Update into view
-        recycler_pitch = pitchesView;
-        recycler_pitch.setHasFixedSize(true);
-        recycler_pitch.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recycler_league = leagueView;
+        recycler_league.setHasFixedSize(true);
+        recycler_league.setLayoutManager(new LinearLayoutManager(this.getContext()));
 
         //https://developer.android.com/guide/topics/ui/layout/recyclerview
         class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
@@ -135,8 +137,7 @@ public class BookingStep2Fragment extends Fragment {
             public MyAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
                 // create a new view
-                androidx.cardview.widget.CardView v = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.layout_pitch, parent, false);
-//                parent.addView(v);
+                androidx.cardview.widget.CardView v = (CardView) LayoutInflater.from(getContext()).inflate(R.layout.activity_league_layout, parent, false);
 
                 MyViewHolder vh = new MyViewHolder(v);
 
@@ -148,22 +149,22 @@ public class BookingStep2Fragment extends Fragment {
             public void onBindViewHolder(MyViewHolder holder, int position) {
                 // - get element from your dataset at this position
                 // - replace the contents of the view with that element
-                Pitch p = list.get(position);
-                LinearLayout o = (LinearLayout) holder.v.getChildAt(0);
+                League l = list.get(position);
+                LinearLayout o = (LinearLayout) holder.v.getChildAt(1);
 
 
 
-                ((TextView) o.getChildAt(1)).setText("Pitch Number: " + p.no);
-                ((TextView) o.getChildAt(2)).setText(String.valueOf(p.pitchSize));
-                ((TextView) o.getChildAt(3)).setText("£" + p.pitchPrice);
+                ((TextView) o.getChildAt(0)).setText(String.valueOf(l.leagueName));
+                ((TextView) o.getChildAt(1)).setText(String.valueOf(l.ageRange));
+                ((TextView) o.getChildAt(2)).setText(String.valueOf(l.leagueCapacity));
 
 
-                holder.itemView.setOnClickListener((event) -> {
-                    Pitch clickedPitch  = p;
-                    Toast.makeText(getContext(), "You Have Selected Pitch Number" + p, Toast.LENGTH_SHORT).show();
+//                holder.itemView.setOnClickListener((event) -> {
+//                    BookingStep2Fragment.Pitch clickedPitch  = p;
+//                    Toast.makeText(getContext(), "You Have Selected Pitch Number" + p, Toast.LENGTH_SHORT).show();
 
 
-                });
+//                });
 
 
             }
@@ -176,7 +177,7 @@ public class BookingStep2Fragment extends Fragment {
         }
 
         MyAdapter a = new MyAdapter();
-        recycler_pitch.setAdapter(a);
+        recycler_league.setAdapter(a);
 
 
     }

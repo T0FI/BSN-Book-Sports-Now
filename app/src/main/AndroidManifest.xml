@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.group_project_2019_20_group_6">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingActivity">
+
+        <activity android:name=".Splash_Screen">
+
+            <!-- Need to keep this as this so the splash screen works -->
+<!--         don't get rid of the intent-filter otherwise you'd get running app error-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Layout_Test"></activity>
+        <activity android:name=".LeagueMain" />
+        <activity android:name=".UserProfile" />
+        <activity android:name=".BookingActivity" />
         <activity android:name=".Singlepayment" />
         <activity android:name=".Homepage" />
         <activity android:name=".Extra2Activity" />
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />
         <activity android:name=".Sports" />
-
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 </manifest>

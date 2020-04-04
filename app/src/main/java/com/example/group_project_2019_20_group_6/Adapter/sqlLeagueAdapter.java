@@ -5,14 +5,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.group_project_2019_20_group_6.Fragments.Booking.BookingStep3Fragment;
+import com.example.group_project_2019_20_group_6.LeagueTest;
 
 import org.json.JSONArray;
 
-public class sqlTimesAdapter {
+public class sqlLeagueAdapter {
 
     //URL to get all the current branches in the database
-    private static String url = "http://81.98.161.132/getAlltimes.php";
+    private static String url = "http://81.98.161.132/getAllLeagues.php";
 
     //Variable for each request on connect
     private static JsonArrayRequest request;
@@ -21,13 +21,14 @@ public class sqlTimesAdapter {
     public static JSONArray json = null;
 
     //https://stackoverflow.com/questions/45849670/how-to-get-from-mysql-data-to-android-with-json
-    public static void connect(final BookingStep3Fragment obj) {
+    public static void connect(final LeagueTest obj) {
+
         request = new JsonArrayRequest(Request.Method.GET, url,null, new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 System.out.println("Complete");
                 json = response;
-                obj.updateSpinnerTime();
+                obj.update();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -43,7 +44,4 @@ public class sqlTimesAdapter {
         Volley.newRequestQueue(obj.getContext()).add(request);
 //        AppController.getInstance();
     }
-
 }
-
-

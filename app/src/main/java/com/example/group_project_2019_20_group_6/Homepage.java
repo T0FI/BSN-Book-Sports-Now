@@ -41,17 +41,23 @@ public class Homepage extends AppCompatActivity {
                 switch(menuItem.getItemId())
                 {
                     case R.id.home:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent = new Intent(Homepage.this,
+                                com.example.group_project_2019_20_group_6.Homepage.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent);
+                        break;
                     case R.id.league:
-                        startActivity(new Intent(getApplicationContext(),LeagueMain.class));
+                        Intent intent2 = new Intent(Homepage.this,
+                                com.example.group_project_2019_20_group_6.LeagueMain.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent2);
+                        break;
                     case R.id.userscreen:
-                        startActivity(new Intent(getApplicationContext(),Homepage.class));
+                        Intent intent3 = new Intent(Homepage.this,
+                                com.example.group_project_2019_20_group_6.UserProfile.class);
                         overridePendingTransition(0,0);
-                        return true;
+                        startActivity(intent3);
+                        break;
                 }
                 return false;
             }

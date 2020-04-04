@@ -12,10 +12,7 @@
         android:title="League"
         android:icon="@drawable/ic_league"/>
 
-<!--    <item-->
-<!--        android:id="@+id/feed"-->
-<!--        android:title="Feed"-->
-<!--        android:icon="@drawable/ic_feed"/>-->
+
     <item
         android:id="@+id/userscreen"
         android:title="Profile"

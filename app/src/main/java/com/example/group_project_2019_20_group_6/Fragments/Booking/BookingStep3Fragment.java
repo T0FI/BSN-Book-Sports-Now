@@ -26,25 +26,16 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-import static com.example.group_project_2019_20_group_6.Adapter.sqlBranchAdapter.json;
+import static com.example.group_project_2019_20_group_6.Adapter.sqlTimesAdapter.json;
 
 
 public class BookingStep3Fragment extends Fragment {
 
 
-//    public static BookingStep3Fragment getInstance() {
-//        if (instance == null)
-//            instance = new BookingStep3Fragment();
-//        return instance;
-//    }
-
     public static class Time {
         int no;
         String timesRange;
 
-        public int get_timesNo() {
-            return no;
-        }
 
         Time(int n, String timesRange) {
             no = n;
@@ -76,10 +67,10 @@ public class BookingStep3Fragment extends Fragment {
         super.onCreate(savedInstanceState);
     }
 
-    public static BookingStep3Fragment.Time selectedTime;
+    public static Time selectedTime;
 
     public void updateSpinnerTime() {
-        ArrayList<BookingStep3Fragment.Time> list = new ArrayList<BookingStep3Fragment.Time>();
+        ArrayList<Time> list = new ArrayList<Time>();
         //Get tuple (row)
         for (int i = 0; i < json.length(); i++) {
             JSONObject elm = null;
@@ -90,7 +81,7 @@ public class BookingStep3Fragment extends Fragment {
             }
             //Create a branch from the tuple
             try {
-                BookingStep3Fragment.Time T = new BookingStep3Fragment.Time(elm.getInt("timesNo"), elm.getString("timesRange"));
+                Time T = new Time(elm.getInt("timesNo"), elm.getString("timesRange"));
                 list.add(T);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -102,7 +93,6 @@ public class BookingStep3Fragment extends Fragment {
         spinnerTime.setOnItemSelectedListener((a,b,c,d)-> {
             selectedTime = list.get(a.getSelectedIndex());
             System.out.println("Selected");
-//            BookingStep2Fragment.connect();
         });
     }
 
