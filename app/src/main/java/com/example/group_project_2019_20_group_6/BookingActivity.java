@@ -33,8 +33,8 @@ public class BookingActivity extends AppCompatActivity {
     @BindView(R.id.view_pager)
     ViewPager viewPager;
 
-    @BindView(R.id.btn_Previous)
-    Button btn_Previous;
+//    @BindView(R.id.btn_Previous)
+//    Button btn_Previous;
 
     @BindView(R.id.btn_Next)
     Button btn_Next;
@@ -44,13 +44,15 @@ public class BookingActivity extends AppCompatActivity {
     @OnClick(R.id.btn_Next)
     void nextClick(){
 
+        Intent intentLoadAnalyseAct = new Intent(BookingActivity.this, Extra1Activity.class);
+        startActivity(intentLoadAnalyseAct);
     }
 
     private BroadcastReceiver buttonNextReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            btn_Next.setEnabled(true);
+            btn_Next.setEnabled(false);
             setColorButton();
         }
     };
@@ -86,13 +88,14 @@ public class BookingActivity extends AppCompatActivity {
                 //Show step
                 stepView.go(i,true  );
 
-
-                if (i==0)
-                    btn_Previous.setEnabled(false);
+                //Enables the "next" button on step 3
+                if (i==2)
+                    btn_Next.setEnabled(true);
                 else
-                    btn_Previous.setEnabled(true);
+                    btn_Next.setEnabled(false);
 
                 setColorButton();
+
 
             }
 
@@ -107,7 +110,7 @@ public class BookingActivity extends AppCompatActivity {
 
     }
 
-    // Changing the color of the buttons
+    // Changing the color of the button
     private void setColorButton() {
 
         if (btn_Next.isEnabled())
@@ -119,17 +122,17 @@ public class BookingActivity extends AppCompatActivity {
             btn_Next.setBackgroundResource(android.R.color.darker_gray);
         }
 
-        if (btn_Previous.isEnabled())
-        {
-            btn_Previous.setBackgroundResource(R.color.colorButton);
-        }
-        else
-        {
-            btn_Previous.setBackgroundResource(android.R.color.darker_gray);
-        }
+//        if (btn_Previous.isEnabled())
+//        {
+//            btn_Previous.setBackgroundResource(R.color.colorButton);
+//        }
+//        else
+//        {
+//            btn_Previous.setBackgroundResource(android.R.color.darker_gray);
+//        }
 
     }
-    // Changing the color of the buttons
+    // Changing the color of the button
 
 
     // All the steps during the booking page

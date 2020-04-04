@@ -13,15 +13,6 @@ import java.util.List;
 public class MyBranchAdapter extends RecyclerView.Adapter<MyBranchAdapter.MyViewHolder> {
 
 
-    LocalBroadcastManager localBroadcastManager;
-
-
-
-    public MyBranchAdapter(Context context){
-
-        localBroadcastManager = LocalBroadcastManager.getInstance(context);
-
-    }
 
 
     @NonNull
