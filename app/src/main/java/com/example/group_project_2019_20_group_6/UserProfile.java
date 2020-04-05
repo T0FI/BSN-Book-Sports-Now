@@ -116,7 +116,6 @@ public class UserProfile extends AppCompatActivity {
 
     private void GetDataFromDataBase(String json) throws JSONException {
         JSONArray jsonArrayList = new JSONArray(json);
-        //   String[] heroes = new String[jsonArrayList.length()];
         ArrayList<String> list = new ArrayList<>();
         for (int i = 0; i < jsonArrayList.length(); i++) {
             JSONObject obj = jsonArrayList.getJSONObject(i);
@@ -128,9 +127,8 @@ public class UserProfile extends AppCompatActivity {
             list.add (obj.getString("cardNo"));
             list.add (obj.getString("dOb"));
         }
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
-//        listView.setAdapter(arrayAdapter);
-        UserNameTv.setText(list.get(0)); //setting the elements of the array into the textview 
+
+        UserNameTv.setText(list.get(0)); //setting the elements of the array into the textview
         firstnameTv.setText(list.get(1));
         lastnameTv2.setText(list.get(2));
         EmailTv.setText(list.get(3));
