@@ -7,143 +7,185 @@
     tools:context=".UserProfile">
 
     <TextView
-        android:id="@+id/textView19"
-        android:layout_width="0dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="103dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
+        android:id="@+id/textView9"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="LastName:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="172dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="FirstName:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <TextView
+        android:id="@+id/lastnameTv2"
+        android:layout_width="172dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView18" />
+        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/firstnameTv" />
+
+    <TextView
+        android:id="@+id/firstnameTv"
+        android:layout_width="172dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/UserNameTv" />
+
+    <TextView
+        android:id="@+id/DobTv"
+        android:layout_width="155dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/lastnameTv2" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="90dp"
-        android:text="dob"
-        android:textSize="30sp"
+        android:layout_width="116dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:text="Dob:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
-        app:layout_constraintEnd_toStartOf="@+id/textView19"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <TextView
-        android:id="@+id/textView17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        android:id="@+id/ContactNoTv"
+        android:layout_width="198dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toEndOf="@+id/textView14"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/EmailTv" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:text="Card No"
-        android:textSize="30sp"
+        android:layout_width="138dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:text="Card No:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView19"
-        app:layout_constraintEnd_toStartOf="@+id/textView15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <TextView
-        android:id="@+id/textView15"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView18"
+        android:id="@+id/CardNoTv"
+        android:layout_width="198dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="40dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/ContactNoTv" />
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="24dp"
-        android:text="Contact No"
-        android:textSize="30sp"
+        android:layout_width="147dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:text="ContactNo:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
-        app:layout_constraintEnd_toStartOf="@+id/textView17"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView17" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="65dp"
-        android:text="Email"
-        android:textSize="30sp"
+        android:layout_width="123dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Email:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView17"
-        app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
-        android:id="@+id/textView12"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="109dp"
-        android:layout_marginEnd="58dp"
-        android:layout_marginBottom="111dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        android:id="@+id/EmailTv"
+        android:layout_width="196dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.604"
         app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toTopOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/DobTv" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="0dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="37dp"
-        android:text="UserName"
-        android:textSize="30sp"
+        android:layout_width="167dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="76dp"
+        android:text="UserName:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toStartOf="@+id/textView8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="29dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        android:layout_width="377dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_launcher" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="398dp"
+        android:layout_height="56dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -154,19 +196,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
         app:menu="@menu/menu_navigation"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="59dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        android:id="@+id/UserNameTv"
+        android:layout_width="167dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="76dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
