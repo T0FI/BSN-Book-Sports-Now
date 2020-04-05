@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingActivity">
+        <activity android:name=".Homepage" >
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Singlepayment" />
-        <activity android:name=".Homepage" />
+        <activity android:name=".BookingActivity"/>
+
         <activity android:name=".Extra2Activity" />
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />

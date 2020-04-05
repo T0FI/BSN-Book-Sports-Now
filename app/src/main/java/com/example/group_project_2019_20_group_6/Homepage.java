@@ -64,21 +64,30 @@ public class Homepage extends AppCompatActivity {
     private void initImageBitmaps(){
         Log.d(TAG,"initImageBitmaps: preparing bitmaps.");
 
-        mPostUrls.add("https://i.imgur.com/mMBNROZ.jpg");
+        mPostUrls.add("https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2015/12/Fig-2.jpg?fit=750%2C500&ssl=1");
+        mImageUrls.add("https://www.pexels.com/photo/people-men-grass-sport-2209/");
+        mNames.add("James");
+
+        mPostUrls.add("https://static01.nyt.com/images/2017/06/04/sports/soccer/04CAGES-jp4/00cages16-jumbo.jpg");
         mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
         mNames.add("Powerleague");
 
-        mPostUrls.add("https://i.imgur.com/mMBNROZ.jpg");
+        mPostUrls.add("https://celebreak.eu/wp-content/uploads/2016/12/powerleague2.jpg");
         mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Powerleague");
-
-        mPostUrls.add("https://i.imgur.com/mMBNROZ.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Powerleague");
+        mNames.add("Russ");
         
-        mPostUrls.add("https://i.imgur.com/mMBNROZ.jpg");
+        mPostUrls.add("https://www.openplay.co.uk/uploads/5dV0Zi866jaaXDpT-500x_.jpg");
         mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Powerleague");
+        mNames.add("Bob");
+
+        mPostUrls.add("https://celebreak.eu/wp-content/uploads/2016/09/london-featured-image.jpg");
+        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
+        mNames.add("Stan");
+
+        mPostUrls.add("https://www.soccerbible.com/media/57907/bbk-nike-24-min.jpg");
+        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
+        mNames.add("Stan");
+
 
 
 
