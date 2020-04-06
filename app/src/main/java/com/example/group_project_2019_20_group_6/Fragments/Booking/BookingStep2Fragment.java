@@ -103,7 +103,7 @@ public class BookingStep2Fragment extends Fragment {
                 e.printStackTrace();
             }
 
-            //Create a branch from the row
+            //Create a pitch from the row
             try {
                 Pitch br = new Pitch(elm.getInt("pitchNo"), elm.getInt("pitchPrize"), elm.getString("pitchSize"));
                 list.add(br);
