@@ -6,7 +6,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:usesCleartextTraffic="${usesCleartextTraffic}"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,19 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-
-        <activity android:name=".Splash_Screen"/>
+        <activity android:name=".Splash_Screen">
 
             <!-- Need to keep this as this so the splash screen works -->
 <!--            the intent-filter otherwise you'd get running app error-->
-
-
-        <activity android:name=".League_layout">
-
-        </activity>
-        <activity android:name=".LeagueTest" />
-        <!--<activity android:name=".LeagueMainTest" />-->
-        <activity android:name=".BookingActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Layout_Test"></activity>
+        <activity android:name=".BookingActivity" />
         <activity android:name=".Singlepayment" />
         <activity android:name=".Homepage" />
         <activity android:name=".Extra2Activity" />
