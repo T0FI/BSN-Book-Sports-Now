@@ -17,16 +17,16 @@ import butterknife.OnClick;
 public class LeagueMain extends AppCompatActivity {
 
 
-    @BindView(R.id.join)
-    Button Join;
-
-
-    @OnClick(R.id.join)
-    void nextClick(){
-
-        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMain.class);
-        startActivity(intentLoadAnalyseAct);
-    }
+//    @BindView(R.id.join)
+//    Button Join;
+//
+//
+//    @OnClick(R.id.join)
+//    void nextClick(){
+//
+//        Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMain.class);
+//        startActivity(intentLoadAnalyseAct);
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,10 @@ public class LeagueMain extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),league_setup.class));
                 break;
             case R.id.current_leagues:
-                Intent intentLoadAnalyseAct = new Intent(LeagueMain.this, LeagueMainTest.class);
+                Intent intent = new Intent(LeagueMain.this,
+                        com.example.group_project_2019_20_group_6.LeagueMainTest.class);
+                overridePendingTransition(0,0);
+                startActivity(intent);
                 break;
         }
 
