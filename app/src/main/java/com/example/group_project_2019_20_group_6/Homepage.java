@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -13,6 +14,14 @@ import android.view.MenuItem;
 import com.example.group_project_2019_20_group_6.Adapter.HomepageRecyclerViewAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 
 public class Homepage extends AppCompatActivity {
@@ -29,6 +38,7 @@ public class Homepage extends AppCompatActivity {
         setContentView(R.layout.activity_homepage);
 
         Log.d(TAG, "onCreat started");
+        getJSON("http://81.98.161.132/getallnewsfeed.php");
         initImageBitmaps();
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -70,34 +80,9 @@ public class Homepage extends AppCompatActivity {
     private void initImageBitmaps(){
         Log.d(TAG,"initImageBitmaps: preparing bitmaps.");
 
-        mPostUrls.add("https://i2.wp.com/digital-photography-school.com/wp-content/uploads/2015/12/Fig-2.jpg?fit=750%2C500&ssl=1");
-        mImageUrls.add("https://www.pexels.com/photo/people-men-grass-sport-2209/");
-        mNames.add("James");
-
-        mPostUrls.add("https://static01.nyt.com/images/2017/06/04/sports/soccer/04CAGES-jp4/00cages16-jumbo.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Powerleague");
-
-        mPostUrls.add("https://celebreak.eu/wp-content/uploads/2016/12/powerleague2.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Russ");
-        
-        mPostUrls.add("https://www.openplay.co.uk/uploads/5dV0Zi866jaaXDpT-500x_.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Bob");
-
-        mPostUrls.add("https://celebreak.eu/wp-content/uploads/2016/09/london-featured-image.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Stan");
-
-        mPostUrls.add("https://www.soccerbible.com/media/57907/bbk-nike-24-min.jpg");
-        mImageUrls.add("http://i.imgur.com/Vwj2r0R.jpg");
-        mNames.add("Stan");
 
 
 
-
-        initRecyclerView();
     }
 
     private void initRecyclerView(){
@@ -109,4 +94,61 @@ public class Homepage extends AppCompatActivity {
 
     }
 
+
+    private void getJSON(final String urlWebService) {
+
+        class GetJSON extends AsyncTask<Void, Void, String> {
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+            }
+
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                try {
+                    GetDataFromDataBase(s); //calling the method below
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+                try {
+                    URL url = new URL(urlWebService);
+                    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                    StringBuilder sb = new StringBuilder();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                    String json;
+                    while ((json = bufferedReader.readLine()) != null) {
+                        sb.append(json + "\n");
+                    }
+                    return sb.toString().trim();
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+        }
+        GetJSON getJSON = new GetJSON();
+        getJSON.execute();
+    }
+
+    private void GetDataFromDataBase(String json) throws JSONException {
+        JSONArray jsonArrayList = new JSONArray(json);
+        ArrayList<String> list = new ArrayList<>();
+        for (int i = 0; i < jsonArrayList.length(); i++) {
+            JSONObject obj = jsonArrayList.getJSONObject(i);
+            mNames.add (obj.getString( "Username")); //adding the elements of the database
+            mPostUrls.add (obj.getString("postImage"));
+            mImageUrls.add (obj.getString("UserImage"));
+
+        }
+
+        initRecyclerView();
+
+
+    }
 }

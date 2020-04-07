@@ -38,7 +38,7 @@ public class HomepageRecyclerViewAdapter extends RecyclerView.Adapter<HomepageRe
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_list,parent,false); 
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
@@ -47,11 +47,16 @@ public class HomepageRecyclerViewAdapter extends RecyclerView.Adapter<HomepageRe
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.d(TAG,"onBindViewHolder: called.");
 
-        // we will be adding the images to this section
+        // we will be adding the image post to this section
         Glide.with(mContext)
                 .asBitmap()
                 .load(mImagesPost.get(position))
                 .into(holder.image);
+        // adding the image userphoto
+        Glide.with(mContext)
+                .asBitmap()
+                .load(mImage.get(position))
+                .into(holder.userimage);
 
         // we will get the image names
         holder.imagename.setText(mImageNames.get(position));
