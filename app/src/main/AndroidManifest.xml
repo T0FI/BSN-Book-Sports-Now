@@ -34,6 +34,12 @@
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />
         <activity android:name=".Sports" />
+        <activity android:name=".LeagueMainTest"/>
+        <activity android:name=".League_layout"/>
+        <activity android:name=".LeagueTest"/>
+        <activity android:name=".league_setup"/>
+        <activity android:name=".SplitPay"/>
+        <activity android:name=".Payment_choice"/>
     </application>
 
 </manifest>
