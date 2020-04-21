@@ -40,6 +40,10 @@
         <activity android:name=".league_setup"/>
         <activity android:name=".SplitPay"/>
         <activity android:name=".Payment_choice"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
