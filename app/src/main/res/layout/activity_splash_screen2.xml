@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/changa_one"
-        android:text="Book Sports Now "
+        android:text="Book Sports Now test"
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
