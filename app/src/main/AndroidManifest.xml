@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Splash_Screen">
+        <activity android:name=".Splash_screen2">
 
             <!-- Need to keep this as this so the splash screen works -->
             <!-- don't get rid of the intent-filter otherwise you'd get running app error -->

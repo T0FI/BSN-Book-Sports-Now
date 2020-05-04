@@ -11,14 +11,13 @@
 
     <ImageView
         android:id="@+id/appCompatImageView"
-        android:layout_width="0dp"
-        android:layout_height="403dp"
+        android:layout_width="421dp"
+        android:layout_height="415dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:src="@drawable/bsn_logo2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,9 +25,9 @@
         android:id="@+id/textView10"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/changa_one"
-        android:text="Book Sports Now test"
+        android:text="Book Sports Now"
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
