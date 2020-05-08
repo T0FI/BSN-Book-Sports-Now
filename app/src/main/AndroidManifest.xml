@@ -34,12 +34,13 @@
         <activity android:name=".ExtraAdapter" />
         <activity android:name=".Extra1Activity" />
         <activity android:name=".Sports" />
-        <activity android:name=".LeagueMainTest"/>
-        <activity android:name=".League_layout"/>
-        <activity android:name=".LeagueTest"/>
-        <activity android:name=".league_setup"/>
-        <activity android:name=".SplitPay"/>
-        <activity android:name=".Payment_choice"/>
+        <activity android:name=".LeagueMainTest" />
+        <activity android:name=".League_layout" />
+        <activity android:name=".LeagueTest" />
+        <activity android:name=".league_setup" />
+        <activity android:name=".SplitPay" />
+        <activity android:name=".Payment_choice" />
+        <activity android:name=".Login_2"/>
 
         <meta-data
             android:name="preloaded_fonts"
