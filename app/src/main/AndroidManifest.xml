@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
+        <activity android:name=".User_Analytics"></activity>
         <activity android:name=".Splash_screen2">
 
             <!-- Need to keep this as this so the splash screen works -->
@@ -42,7 +42,7 @@
         <activity android:name=".SplitPay" />
         <activity android:name=".Payment_choice" />
         <activity android:name=".Login_2" />
-        <activity android:name=".SignUp"/>
+        <activity android:name=".SignUp" />
 
         <meta-data
             android:name="preloaded_fonts"

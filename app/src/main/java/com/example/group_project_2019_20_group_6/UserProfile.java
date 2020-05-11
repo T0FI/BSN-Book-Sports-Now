@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,6 +26,8 @@ import java.util.ArrayList;
 public class UserProfile extends AppCompatActivity {
 
     TextView UserNameTv, firstnameTv, lastnameTv2, EmailTv, ContactNoTv, CardNoTv, DobTv;
+    Button calluser;
+    Button calllogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +70,28 @@ public class UserProfile extends AppCompatActivity {
                 return false;
             }
 
+        });
+
+        calluser = findViewById(R.id.user_analytics);
+
+        calluser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserProfile.this,User_Analytics.class);
+                startActivity(intent);
+
+            }
+        });
+
+        calllogout = findViewById(R.id.logout);
+
+        calllogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UserProfile.this,Login_2.class);
+                startActivity(intent);
+
+            }
         });
 
     } //on create ending
