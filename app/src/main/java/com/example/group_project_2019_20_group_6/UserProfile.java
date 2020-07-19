@@ -72,12 +72,12 @@ public class UserProfile extends AppCompatActivity {
 
         });
 
-        calluser = findViewById(R.id.user_analytics);
+        calluser = findViewById(R.id.user_dashboard);
 
         calluser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(UserProfile.this,User_Analytics.class);
+                Intent intent = new Intent(UserProfile.this, User_Dashboard.class);
                 startActivity(intent);
 
             }

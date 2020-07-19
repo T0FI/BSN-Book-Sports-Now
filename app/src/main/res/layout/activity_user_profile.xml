@@ -214,14 +214,14 @@
 
 
     <Button
-        android:id="@+id/user_analytics"
+        android:id="@+id/user_dashboard"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="30dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/antic"
-        android:text="USER ANALYTICS"
+        android:text="Dashbaord"
         android:textColor="#fff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -239,7 +239,7 @@
         android:layout_marginEnd="30dp"
         android:background="@color/colorPrimary"
         android:fontFamily="@font/antic"
-        android:text="LOG OUT"
+        android:text="Log Out"
         android:textColor="#fff"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

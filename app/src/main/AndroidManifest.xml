@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".User_Analytics"></activity>
+        <activity android:name=".User_Dashboard"></activity>
         <activity android:name=".Splash_screen2">
 
             <!-- Need to keep this as this so the splash screen works -->
