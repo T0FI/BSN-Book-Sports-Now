@@ -96,7 +96,7 @@ public class User_Dashboard extends AppCompatActivity {
         callinvite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(User_Dashboard.this,Rewards.class);
+                Intent intent = new Intent(User_Dashboard.this,Invite_friend.class);
                 startActivity(intent);
 
             }

@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Feedback"></activity>
+        <activity android:name=".Invite_friend"></activity>
+        <activity android:name=".Feedback" />
         <activity android:name=".Manage_Account" />
         <activity android:name=".Rewards" />
         <activity android:name=".Previous_booking" />

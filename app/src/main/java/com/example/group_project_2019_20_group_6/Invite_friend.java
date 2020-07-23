@@ -9,12 +9,12 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class Feedback extends AppCompatActivity {
+public class Invite_friend extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feedback);
+        setContentView(R.layout.activity_invite_friend);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -24,19 +24,19 @@ public class Feedback extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.home:
-                        Intent intent = new Intent(Feedback.this,
+                        Intent intent = new Intent(Invite_friend.this,
                                 com.example.group_project_2019_20_group_6.Homepage.class);
                         overridePendingTransition(0, 0);
                         startActivity(intent);
                         break;
                     case R.id.league:
-                        Intent intent2 = new Intent(Feedback.this,
+                        Intent intent2 = new Intent(Invite_friend.this,
                                 com.example.group_project_2019_20_group_6.LeagueMain.class);
                         overridePendingTransition(0, 0);
                         startActivity(intent2);
                         break;
                     case R.id.userscreen:
-                        Intent intent3 = new Intent(Feedback .this,
+                        Intent intent3 = new Intent(Invite_friend.this,
                                 com.example.group_project_2019_20_group_6.UserProfile.class);
                         overridePendingTransition(0, 0);
                         startActivity(intent3);

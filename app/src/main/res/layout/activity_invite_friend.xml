@@ -4,46 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Feedback">
+    tools:context=".Invite_friend">
 
-    <TextView
-        android:id="@+id/logo_name22"
-        android:layout_width="276dp"
-        android:layout_height="122dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/changa_one"
-        android:text="Feedback Page"
-        android:textColor="@color/colorPrimary"
-        android:textSize="45sp"
-        android:transitionName="logo_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/feed_descr"
-        android:layout_width="365dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="170dp"
-        android:layout_marginLeft="20dp"
-        android:fontFamily="@font/antic"
-        android:text="The BSN team would love to hear any feedback you pay have about our application!"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/feed_descr1"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="220dp"
-        android:fontFamily="@font/antic"
-        android:text="Good or Bad, Please leave your feedback below!"
-        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bsn_qr" />
 
     <ImageView
         android:id="@+id/logo_image22"
@@ -53,6 +24,31 @@
         android:src="@drawable/bsn_logo2"
         android:transitionName="logo_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/inv_descr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/antic"
+        android:text="Invite your friends to sign up to BSN using your dedicated QR code and recieve a 50% discount on your next booking!"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inv_title" />
+
+    <TextView
+        android:id="@+id/inv_title"
+        android:layout_width="210dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/changa_one"
+        android:text="Invite a Friend "
+        android:textColor="@color/colorPrimary"
+        android:textSize="45sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -72,6 +68,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:menu="@menu/menu_navigation"></com.google.android.material.bottomnavigation.BottomNavigationView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
